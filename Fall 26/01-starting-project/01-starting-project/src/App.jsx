@@ -1,9 +1,12 @@
-//App Jsx
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept/CoreConcept.jsx';
 import { CORE_CONCEPTS } from './assets/data.js';
 import TabButton from './components/TabButton/TabButton.jsx';
 function App() {
+  
+  function handleSelect(){
+    console.log('Helllo World!');
+  }
   return (
     <div>
       <Header />
@@ -20,10 +23,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton> Components </TabButton>
-            <TabButton> JSX </TabButton>
-            <TabButton> Props </TabButton>
-            <TabButton> State </TabButton>
+            <TabButton onSelect={()=>{handleSelect('components')}}> Components </TabButton>
+            <TabButton onSelect={()=>{handleSelect('jsx')}}> JSX </TabButton>
+            <TabButton onSelect={()=>{handleSelect('props')}}> Props </TabButton>
+            <TabButton onSelect={()=>{handleSelect('state')}}> State </TabButton>
           </menu>
         </section>
       </main>
