@@ -1,5 +1,4 @@
-//core_concepts
-import { CORE_CONCEPTS } from "../../assets/data";
+//coreConcept
 import CoreConcept from "./CoreConcept";
 
 export default function CoreConcepts(){
@@ -10,9 +9,9 @@ export default function CoreConcepts(){
         //     {CORE_CONCEPTS.map((conceptItem)=><CoreConcept {...conceptItem}/>)}
         //     </ul>
         // </section>
-        <Section title="Time to get started">
+        <Section id='core-concepts' title="Time to get started">
             <ul>
-            {CORE_CONCEPTS.map((conceptItem)=><CoreConcept {...conceptItem}/>)}
+                {CORE_CONCEPTS.map((conceptItem)=><CoreConcept {...conceptItem}/>)}
             </ul>
         </Section>
     )
