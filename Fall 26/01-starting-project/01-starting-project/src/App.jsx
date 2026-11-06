@@ -21,32 +21,32 @@ export const DUMMY_TODOS = [
 
 export default function App() {
   // Question 1
-  function handleCreateUser(name) {
+  function createUser(name) {
     user.name = name;
   }
   
   // Question 2
   const [price, setPrice] = useState(100);
 
-  function handleApplyDiscount() {
+  function applyDiscount() {
     setPrice(75);
   }
 
   // Question 3
   const [isAlertVisible, setIsAlertVisible] = useState(false);
 
-  function handleDeleteClick() {
+  function deleteClick() {
     setIsAlertVisible(true);
   }
 
-  function handleProceedClick() {
+  function proceedClick() {
     setIsAlertVisible(false);
   }
 
   // Question 4
   const [isActive, setIsActive] = useState(false);
 
-  function handleToggleStyle() {
+  function toggleStyle() {
     setIsActive((prevActive) => !prevActive);
   }
 
@@ -60,7 +60,7 @@ export default function App() {
           <input type="text" />
         </p>
         <p id="actions">
-          <button onClick={() => handleCreateUser('George')}>Create User</button>
+          <button onClick={() => createUser('George')}>Create User</button>
         </p>
       </div>
 
@@ -68,7 +68,7 @@ export default function App() {
       <div>
         <hr />
         <p data-testid="price">${price}</p>
-        <button onClick={handleApplyDiscount}>Apply Discount</button>
+        <button onClick={applyDiscount}>Apply Discount</button>
       </div>
 
       {/* Question 3 */}
@@ -78,17 +78,17 @@ export default function App() {
           <div data-testid="alert" id="alert">
             <h2>Are you sure?</h2>
             <p>These changes can't be reverted!</p>
-            <button onClick={handleProceedClick}>Proceed</button>
+            <button onClick={proceedClick}>Proceed</button>
           </div>
         )}
-        <button onClick={handleDeleteClick}>Delete</button>
+        <button onClick={deleteClick}>Delete</button>
       </div>
 
       {/* Question 4 */}
       <div>
         <hr />
         <p className={isActive ? 'active' : ''}>Style me!</p>
-        <button onClick={handleToggleStyle}>Toggle style</button>
+        <button onClick={toggleStyle}>Toggle style</button>
       </div>
 
       {/* Question 5 */}
