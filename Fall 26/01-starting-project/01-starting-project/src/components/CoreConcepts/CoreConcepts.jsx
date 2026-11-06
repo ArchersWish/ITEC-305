@@ -1,5 +1,7 @@
 //coreConcept
 import CoreConcept from "./CoreConcept";
+import Section from "../Section.jsx";
+import { CORE_CONCEPTS } from "../../assets/data.js";
 
 export default function CoreConcepts(){
     return(
